@@ -29,7 +29,7 @@
 	<window if="desktop" orientation="landscape" fullscreen="false" resizable="true" vsync="false"/>
 
 	<!--Mobile-specific-->
-	<window if="mobile" orientation="landscape" fullscreen="true" width="0" height="0" resizable="false"/>
+	<window if="mobile" orientation="landscape" fullscreen="true" width="1280" height="720" resizable="false"/>
 
 	<!--Switch-specific-->
 	<window if="switch" orientation="landscape" fullscreen="true" width="0" height="0" resizable="true" />
@@ -99,8 +99,6 @@
 	<assets path="plugins/" rename='' if="windows"/>
 	<assets path="dlls/" rename='' if="windows"/>
 
-	<ndll name="vlc" if="android"/>
-	<ndll name="c++_shared" if="android"/>
 	<assets path='example_mods' rename='mods' embed='false'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />
 	<assets path='LICENSE' rename='LICENSE.txt' />
@@ -128,7 +126,7 @@
 
 	<!--In case you want to use the ui package-->
 	<haxelib name="flixel-ui" />
-	<haxelib name="newgrounds"/>
+	<haxelib name="newgrounds" unless="android"/>
 	<haxelib name="faxe" if='switch'/>
 	<haxelib name="polymod"/>
 	<haxelib name="discord_rpc" if="windows"/>
